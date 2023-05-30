@@ -2,6 +2,7 @@
     <h1 class="h1-contact animate__animated animate__slideInDown">Contact Me</h1>
     <form class="contact-form" (submit)="sendEmail($event)">
         <input placeholder="Name" required type="text" name="from_name" [(ngModel)]="name">
+        <input placeholder="Email" required type="email" name="from_email" [(ngModel)]="email">
         <textarea placeholder="Message" name="message" [(ngModel)]="message" required></textarea>
         <input id="btn-submit" type="submit" value="Contact Me">
     </form>
