@@ -11,6 +11,7 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 export class ContactComponent {
     message = "";
     name = "";
+    email = "";
     angularScript = [
         { isThis: '' }
     ];
@@ -22,9 +23,14 @@ export class ContactComponent {
     }
 
     sendEmail(e: Event) {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         e.preventDefault();
-        if (!this.name || !this.message) {
+        if (!this.name || !this.message || !this.email) {
             this.notifyService.error("Please fill in all input fields in order to send a message");
+            return;
+        }
+        if (!emailRegex.test(this.email)) {
+            this.notifyService.error("Invalid email address");
             return;
         }
         else {
@@ -33,6 +39,7 @@ export class ContactComponent {
                     console.log(result.text);
                     this.name = "";
                     this.message = "";
+                    this.email = "";
                     this.notifyService.success('Email Sent Successfully!\nThank you for contacting me :)');
                 }, (error) => {
                     console.log(error.text);
