@@ -156,6 +156,9 @@ p::selection {
 }
 
 @media (max-width: 1000px) {
+    .about-wrapper {
+        height: 190vh;
+    }
     .container-about {
         padding-top: 1vh;
     }
