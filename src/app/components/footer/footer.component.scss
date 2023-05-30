@@ -1,0 +1,45 @@
+.end {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: .4rem;
+    padding-bottom: .4rem;
+    background: #173353;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+p {
+    color: aliceblue;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.phone{
+    margin-right: 1rem;
+}
+
+.icon {
+    width: 3rem;
+    z-index: 10;
+    margin-left: 1rem;
+}
+
+
+@media (max-width:768px) {
+    .icon {
+        width: 1.5rem;
+        margin-left: .5rem;
+    }
+    p {
+        font-size: .6rem;
+    }
+    .phone{
+        margin-right: .5rem;
+    }
+    .end{
+        padding: .1rem;
+    }
+}

@@ -1,0 +1,131 @@
+.contato-wrapper {
+    width: 100vw;
+    height: 92vh;
+    background: #315d8a; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5vh;
+}
+
+.h1-contact {
+    margin-top: 8vh;
+    padding: 3vh 0px 3vh 0px;
+    text-align: center;
+    color: white;
+    width: 100vw;
+    background-color: rgba(23, 27, 31, 0.5);
+    z-index: 99999;
+
+}
+
+.contact-form {
+    height: 70vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+
+input, textarea {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px dashed black;
+    text-decoration: none;
+    background: #e3e3e3a6;
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    transition: all .2s;
+    height: 5vh;
+    font-size: 1.4rem;
+    padding-left: .5vw;
+    color: #000000;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #202020;
+    opacity: .5;
+    padding-left: 1vw;
+}
+
+textarea {
+    padding-top: 1vh;
+    min-width: 50vw;
+    max-width: 50vw;
+    min-height: 20vh;
+    max-height: 20vh;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 0;
+    border-bottom: 4px solid #313131;
+    outline: 0;
+    border-radius: 8px;
+    padding-left: 1rem;
+    font-weight: bolder;
+}
+
+#btn-submit {
+    height: 8vh;
+    width: calc(100% + .5vw);
+    transition: all .2s;
+    padding-left: 0vw;
+    font-size: 2rem;
+    font-weight: bolder;
+    font-family: "Space Grotesk", sans-serif;
+    border-radius: 6px;
+    border: 2px solid ;
+    background-color: #173353;
+    color: rgb(231, 231, 231);
+    cursor: pointer;
+}
+
+#btn-submit:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+    #btn-submit {
+        height: 12vh;
+        margin-bottom: 5rem;
+    }
+}
+
+@media (max-width: 450px) {
+    input, textarea {
+        font-size:1rem;
+    }
+    .contact-form {
+        width: 80vw;
+        margin-top: 4vh;
+        margin-bottom: 10vh;
+    }
+    .text-contact {
+        padding-top: 2vh;
+    }
+    .h1-contact{
+        margin-top: 0vh;
+        font-size:4vh;
+    }
+    .h2-contact{
+        font-size: 2.5vh;
+        width: 80%;
+        margin:unset;
+    }
+    #btn-submit {
+        width: 110%;
+        font-size: 1.2rem;
+    }
+    textarea {
+        padding-top: 1vh;
+        min-width: 80vw;
+        max-width: 80vw;
+        min-height: 20vh;
+        max-height: 20vh;
+    }  
+}

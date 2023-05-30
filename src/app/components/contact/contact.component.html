@@ -1,0 +1,8 @@
+<div class="contato-wrapper animate__animated animate__fadeIn">
+    <h1 class="h1-contact animate__animated animate__slideInDown">Contact Me</h1>
+    <form class="contact-form" (submit)="sendEmail($event)">
+        <input placeholder="Name" required type="text" name="from_name" [(ngModel)]="name">
+        <textarea placeholder="Message" name="message" [(ngModel)]="message" required></textarea>
+        <input id="btn-submit" type="submit" value="Contact Me">
+    </form>
+</div>

@@ -1,0 +1,21 @@
+<div class="nav-wrapper animate__animated animate__slideInDown">
+    <img class="logo" src="assets/logo.png" alt="logo Amir Berko">
+    <a id="home" ((click))="navService.mouseIn('home', false)" routerLink="home">Home</a>
+    <a id="about" ((click))="navService.mouseIn('about', false)" routerLink="about">About me</a>
+    <a id="contact" ((click))="navService.mouseIn('contact', false)" routerLink="contact">Contact</a>
+</div>
+
+<div class="trace-wrapper" (click)="navService.responsiveNav()">
+    <div class="trace"></div>
+    <div class="trace"></div>
+    <div class="trace"></div>
+</div>
+
+<div class="nav-responsive">
+    <a id="home-responsive" class="nav-link-responsive" (click)="navService.mouseIn('home', true)"
+        routerLink="home">Home</a>
+    <a id="about-responsive" class="nav-link-responsive" (click)="navService.mouseIn('about', true)"
+        routerLink="about">About me</a>
+    <a id="contact-responsive" class="nav-link-responsive" (click)="navService.mouseIn('contact', true)"
+        routerLink="contact">Contact</a>
+</div>

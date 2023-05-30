@@ -1,0 +1,27 @@
+<div class="about-wrapper animate__animated animate__backInDown animate__faster">
+    <div class="container-about">
+        <img class="img-about" src="assets/berko.png" alt="Amir Berko">
+        <div class="about-text animate__animated animate__fadeInDown">
+            <h1>Hello and {{ greeting }}</h1>
+            <p id="my-name">My name is Amir Berko,</p>
+            <p>With <b>13 years</b> of experience in strategic procurement and sourcing, I am Amir, a highly skilled and
+                accomplished senior buyer. Specializing in cost reduction, negotiation management, and exceeding savings
+                targets, I have successfully managed diverse portfolios of local and international suppliers,
+                particularly in the high-tech and general industries. I excel in order management, ensuring seamless
+                tracking from placement to delivery, and handle invoice approvals and payment processing with utmost
+                efficiency. My expertise extends to risk management, crisis resolution, and providing innovative
+                solutions. Alongside my strong business acumen, I possess exceptional English proficiency, excellent
+                interpersonal communication skills, and a talent for fostering positive work environments.
+
+            </p>
+            <div class="btns-wrapper">
+                <button class="btn-about" (click)="downloadEnglishCV()">My Resume in English</button>
+                <button class="btn-about" (click)="downloadHebrewCV()">My Resume in Hebrew</button>
+                <button class="btn-about" (click)="navService.mouseIn('contact', false)">Contact Me</button>
+              </div>
+              
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="line"></div>
+</div>
